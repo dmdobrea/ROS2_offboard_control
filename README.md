@@ -44,10 +44,10 @@ Set up a **PX4** development environment on Ubuntu like this:
 
 <html>
   <head>
-$ git clone https://github.com/PX4/PX4-Autopilot.git --recursive
-$ cd PX4-Autopilot/
+    $ git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+    $ cd PX4-Autopilot/
 
-$ bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+    $ bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
   </head>
 
 
