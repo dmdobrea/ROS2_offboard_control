@@ -37,3 +37,15 @@ This repo is based on:
 
 ## Setup Steps
 All the steps needed to install and configure the various components required to support this application are outlined as follows:
+
+### Install PX4
+You only need to install **PX4** if you require the simulator, as we do in this guide. If you're working on a real **UAV** system, the **PX4 autopilot** is already installed on your drone.
+Set up a **PX4** development environment on Ubuntu like this:
+`
+$ git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+$ cd PX4-Autopilot/
+
+$ bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+`
+
+
