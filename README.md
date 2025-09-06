@@ -23,3 +23,9 @@ In the [xbox.py](https://github.com/dmdobrea/ROS2_offboard_control/blob/main/off
   <img src="Images/mode2.png" width="300"/>
 </p>
 
+This repo is based on: 
+* [Jaeyoung Lim's Offboard example](https://github.com/Jaeyoung-Lim/px4-offboard) and
+* [ARK Electronics example](https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example)
+
+
+
