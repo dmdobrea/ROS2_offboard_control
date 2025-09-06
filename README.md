@@ -76,6 +76,14 @@ The instructions provided above are reproduced from the official installation gu
 
 [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
+One may install either the desktop version (ros-humble-desktop), the minimalist version (ros-humble-ros-base), or the development tools (ros-dev-tools).
+Specific Python dependencies are also required to be installed (using pip or apt):
+
+```
+$ pip3 install --user -U empy==3.3.4 pyros-genmsg setuptools
+```
+### Set up Micro XRCE-DDS Agent & Client
+
 
 
 
