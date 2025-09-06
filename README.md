@@ -18,5 +18,8 @@ The second node receives information from the XBOX controller via the Python pyg
 
 In the [xbox.py](https://github.com/dmdobrea/ROS2_offboard_control/blob/main/offboard_control/offboard_control/xbox.py) file (used to interface with Xbox controller), the variable __m3_vs_m2__ sets the mode mapping of the Xbox’s joysticks. If __m3_vs_m2 = 0__, **Mode 2** is active. In the case of __m3_vs_m2 = 1__, **Mode 3** is active. See the following figures.
 
-![First image](Images/mode2.png))
-![Second image](Images/mode2.png)
+<p align="center">
+  <img src="Images/mode2.png" width="300"/>
+  <img src="Images/mode2.png" width="300"/>
+</p>
+
