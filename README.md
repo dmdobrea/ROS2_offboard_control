@@ -14,4 +14,4 @@ Essentially, the entire project consists of two nodes.
 
 The first node controls the **PX4** autopilot through the **Micro XRCE-DDS bridge**. Commands are sent using speed information, but the code for position control also exists in the application and can be used as is. 
 
-The second node receives information from the XBOX controller via the Python pygame library. Communication between nodes occurs through two topics: * */offboard_velocity_cmd* * (of Twist type – used for sending velocity commands) and * */action_message* * (of UInt8 data type).
+The second node receives information from the XBOX controller via the Python pygame library. Communication between nodes occurs through two topics: __/offboard_velocity_cmd__ (of Twist type – used for sending velocity commands) and __/action_message__ (of UInt8 data type).
