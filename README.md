@@ -291,6 +291,58 @@ If you want to apply this knowledge to a real UAV, here are some additional step
 Section “11. ROS2 (on Kria KR260 development board) – PX4 (running on HoverGames UAV) integration” covers all tasks that must be performed on the companion computer, originally executed on the **Ubuntu 22.04** system, as was presented above.
 
 ## Clone, build, and run this package
+Be sure you're in the _ _/src_ _ directory of your workspace and then run:
+
+```
+git clone https://github.com/dmdobrea/ROS2_offboard_control.git
+```
+
+Source our **ROS2** installation:
+
+```
+$ source /opt/ros/humble/setup.bash
+```
+
+Now build the application:
+
+```
+$ colcon build –packages-select offboard_control
+```
+
+Run all supported components:
+Inside the **PX4-Autopilot** folder:
+
+```
+$ make px4_sitl gz_x500
+```
+
+Run **uXRCE-DDS** client:
+
+```
+$ MicroXRCEAgent udp4 -p 8888
+```
+
+and the **QGC** application:
+
+```
+$ ./QGroundControl.AppImage
+```
+
+In the end, in two different terminals:
+
+```
+$ ros2 run offboard_control xbox
+$ ros2 run offboard_control fly
+```
+
+Now, by using an **Xbox** controller, fly your drone.
+
+
+
+
+
+
+
 
 
 
