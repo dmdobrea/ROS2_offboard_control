@@ -120,6 +120,25 @@ Available arguments (per transport):
     -D/--dev <value>.
 ```
 
+Now, initiate the agent with configurations designated for establishing a connection to the **uXRCE-DDS component** operating within the simulator.
+
+```
+$ MicroXRCEAgent udp4 -p 8888
+```
+
+### Start the simulator
+The build system facilitates the process of constructing and initiating **PX4** on **SITL**, launching a simulator, and establishing connections. The simplified syntax appears as follows:
+
+```
+$ make px4_sitl simulator[_vehicle-model]
+```
+
+Where simulator is gz (for Gazebo), gazebo-classic, jmavsim or some other simulator, and vehicle-model is a particular vehicle type supported by that simulator.
+If you encounter issues loading Gazebo, please install the following packages:
+
+
+
+
 
 
 
