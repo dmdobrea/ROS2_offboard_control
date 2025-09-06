@@ -15,3 +15,5 @@ Essentially, the entire project consists of two nodes.
 The first node controls the **PX4** autopilot through the **Micro XRCE-DDS bridge**. Commands are sent using speed information, but the code for position control also exists in the application and can be used as is. 
 
 The second node receives information from the XBOX controller via the Python pygame library. Communication between nodes occurs through two topics: __/offboard_velocity_cmd__ (of Twist type – used for sending velocity commands) and __/action_message__ (of UInt8 data type).
+
+In the [xbox.py](https://github.com/dmdobrea/ROS2_offboard_control/blob/main/offboard_control/offboard_control/xbox.py) file (used to interface with Xbox controller), the variable m3_vs_m2 sets the mode mapping of the Xbox’s joysticks. If m3_vs_m2 = 0, Mode 2 is active. In the case of m3_vs_m2 = 1, Mode 3 is active. See the following figures.
