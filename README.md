@@ -199,6 +199,98 @@ All applications developed by us need to be built in a workspace that uses the s
 ### Testing the bridge connection
 To inspect the bridge, see if you can get new topics from the drone:
 
+```
+$ cd ~/ros2_ws
+$ . install/setup.sh
+     	or
+$ . install/setup.bash
+$ ros2 topic list
+```
+
+If the bridge is operational, a list of topics transmitted from the **PX4 autopilot** should be visible:
+
+```
+/fmu/in/obstacle_distance
+/fmu/in/offboard_control_mode
+/fmu/in/onboard_computer_status
+/fmu/in/sensor_optical_flow
+/fmu/in/telemetry_status
+/fmu/in/trajectory_setpoint
+/fmu/in/vehicle_attitude_setpoint
+/fmu/in/vehicle_command
+/fmu/in/vehicle_mocap_odometry
+/fmu/in/vehicle_rates_setpoint
+/fmu/in/vehicle_trajectory_bezier
+/fmu/in/vehicle_trajectory_waypoint
+/fmu/in/vehicle_visual_odometry
+/fmu/out/failsafe_flags
+/fmu/out/position_setpoint_triplet
+/fmu/out/sensor_combined
+/fmu/out/timesync_status
+/fmu/out/vehicle_attitude
+/fmu/out/vehicle_control_mode
+/fmu/out/vehicle_gps_position
+/fmu/out/vehicle_local_position
+/fmu/out/vehicle_odometry
+/fmu/out/vehicle_status
+/parameter_events
+/rosout
+```
+
+If the bridge isn’t functioning, you will receive the default **ROS2** topics:
+
+```
+/parameter_events
+/rosout
+```
+
+If you encounter issues, use: export _ _ROS_DOMAIN_ID=0_ _. This is considered the only option hardcoded in the _ _AP_DDS_ _ library. Also, consider disconnecting from the internet while running.
+
+Let's read a topic:
+
+```
+$ ros2 topic echo /fmu/out/sensor_combined
+```
+
+And you will obtain a similar result to this:
+
+```
+---
+timestamp: 1721560868336910
+gyro_rad:
+- -0.01551580149680376
+- -0.004595236387103796
+- 0.0026286006905138493
+gyro_integral_dt: 4989
+accelerometer_timestamp_relative: 0
+accelerometer_m_s2:
+- -0.3143690228462219
+- 0.021734124049544334
+- -9.78078556060791
+accelerometer_integral_dt: 5001
+accelerometer_clipping: 0
+gyro_clipping: 1
+accel_calibration_count: 2
+gyro_calibration_count: 1
+---
+```
+
+If you are unable to use _ _ros2 topic echo_ _ for a specific topic, it could be due to a version mismatch between the **flight controller** (**FC**) firmware and the branch of _ _px4_msgs_ _ you are using. In this case, clone the specific _ _px4_msgs_ _:
+
+```
+$ git clone https://github.com/PX4/px4_msgs.git -b release/1.16
+```
+
+The most effective approach for debugging involves examining the topic definitions within the **MAVLink console** from **QGC** and comparing them with the message definitions available on the _ _px4_msgs_ _ branch.
+
+## Connect to a hardware FMU
+If you want to apply this knowledge to a real UAV, here are some additional steps to follow:
+
+[https://www.hackster.io/520087/an-autonomous-shielduav-to-protect-and-save-lives-99a722](https://www.hackster.io/520087/an-autonomous-shielduav-to-protect-and-save-lives-99a722)
+
+Section “11. ROS2 (on Kria KR260 development board) – PX4 (running on HoverGames UAV) integration” covers all tasks that must be performed on the companion computer, originally executed on the **Ubuntu 22.04** system, as was presented above.
+
+## Clone, build, and run this package
 
 
 
