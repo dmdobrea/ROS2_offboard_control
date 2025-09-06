@@ -83,6 +83,44 @@ Specific Python dependencies are also required to be installed (using pip or apt
 $ pip3 install --user -U empy==3.3.4 pyros-genmsg setuptools
 ```
 ### Set up Micro XRCE-DDS Agent & Client
+A companion computer can connect to a **PX4 autopilot** operating on the **FMU** via various methods, including **serial**, **UDP**, **TCP**, or **CAN FD**. All of these connection methods are facilitated by a **uXRCE-DDS middleware** component, which consists of a client application deployed on the **PX4 autopilot** and an agent application running on the companion computer. Even when operating within a simulated environment, our **ROS2** application must establish a connection to the **PX4 autopilot** via the **uXRCE-DDS bridge**.
+
+The initial step involves installing the agent onto the companion computer or the Ubuntu system (such as in the case of a simulator) from the source. Therefore, in a terminal window, build and install the agent.
+
+```
+$ git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+$ cd Micro-XRCE-DDS-Agent
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
+$ sudo ldconfig /usr/local/lib/
+```
+
+Use the following to find more information for executing and configuring the agent, and connect to **PX4** (located on **FMU**) through the **uXRCE-DDS client**.
+
+```
+$ MicroXRCEAgent --help
+Usage: 'MicroXRCEAgent <udp4|udp6|tcp4|tpc6|canfd|serial|multiserial|pseudoterminal> <<args>>'
+
+Available arguments (per transport):
+  * COMMON
+    -h/--help.
+    -m/--middleware <value> (ced, dds, rtps) [default: 'dds'].
+    -r/--refs <value>.
+    -v/--verbose <value> ( - ) [default: ''].
+    -d/--discovery <value> [default: '7400'].
+    -P/--p2p <value>.
+  * IPvX (udp4, udp6, tcp4, tcp6)
+    -p/--port <value>.
+  * SERIAL (serial, multiserial, pseudoterminal)
+    -b/--baudrate <value> [default: '115200'].
+    -D/--dev <value>.  * CAN FD (canfd)
+    -D/--dev <value>.
+```
+
+
 
 
 
