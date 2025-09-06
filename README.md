@@ -24,9 +24,16 @@ In the [xbox.py](https://github.com/dmdobrea/ROS2_offboard_control/blob/main/off
 </p>
 
 This repo is based on: 
-* <a href="https://github.com/Jaeyoung-Lim/px4-offboard" target="_blank">Jaeyoung Lim's Offboard example</a>
 * [Jaeyoung Lim's Offboard example](https://github.com/Jaeyoung-Lim/px4-offboard) and
 * [ARK Electronics example](https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example)
 
+** Prerequisites
+* **ROS2 Humble**
+* **PX4 Autopilot** (the application was tested on the latest version 1.16.0 at the moment of writing this text, September 6, 2025)
+* **Micro XRCE-DDS Agent**
+* **px4_msgs**
+* **Ubuntu 22.04**
+* **Python** - tested on 3.10
 
-
+** Setup Steps
+All the steps needed to install and configure the various components required to support this application are outlined as follows:
