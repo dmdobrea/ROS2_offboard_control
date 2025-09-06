@@ -133,7 +133,7 @@ The build system facilitates the process of constructing and initiating **PX4** 
 $ make px4_sitl simulator[_vehicle-model]
 ```
 
-Where simulator is gz (for Gazebo), gazebo-classic, jmavsim or some other simulator, and vehicle-model is a particular vehicle type supported by that simulator.
+Where simulator is __gz__ (for Gazebo), __gazebo-classic__, __jmavsim__ or some other simulator, and vehicle-model is a particular vehicle type supported by that simulator.
 If you encounter issues loading Gazebo, please install the following packages:
 
 
