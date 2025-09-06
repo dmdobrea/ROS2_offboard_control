@@ -133,8 +133,33 @@ The build system facilitates the process of constructing and initiating **PX4** 
 $ make px4_sitl simulator[_vehicle-model]
 ```
 
-Where simulator is __gz__ (for Gazebo), __gazebo-classic__, __jmavsim__ or some other simulator, and vehicle-model is a particular vehicle type supported by that simulator.
-If you encounter issues loading Gazebo, please install the following packages:
+Where simulator is _ _gz_ _ (for Gazebo), _ _gazebo-classic_ _, _ _jmavsim_ _ or some other simulator, and vehicle-model is a particular vehicle type supported by that simulator.
+If you encounter issues loading **Gazebo**, please install the following packages:
+
+```
+$ pip3 install kconfiglib
+$ pip install --user jsonschema
+$ pip install --user jinja2
+```
+
+Several examples are presented below, with many additional instances available on the respective pages for each of the simulators.
+
+```
+# Start Gazebo with the x500 multicopter
+make px4_sitl gz_x500
+```
+
+```
+# Start Gazebo Classic with iris and optical flow
+make px4_sitl gazebo-classic_iris_opt_flow
+```
+
+```
+# Start JMavSim with iris (default vehicle model)
+make px4_sitl jmavsim
+```
+
+
 
 
 
