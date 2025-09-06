@@ -159,6 +159,19 @@ make px4_sitl gazebo-classic_iris_opt_flow
 make px4_sitl jmavsim
 ```
 
+Now, you can launch the simulated **UAV** by typing:
+
+```
+pxh> commander takeoff/land/arm
+```
+
+### Download, install & run QGroundControl
+To take off, land, or supervise the drone, you can install and run **QGroundControl** (**QGC**). You can find the link here:
+
+[https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
+
+### Build ROS 2 Workspace 
+
 
 
 
