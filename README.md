@@ -275,7 +275,7 @@ gyro_calibration_count: 1
 ---
 ```
 
-If you are unable to use _ _ros2 topic echo_ _ for a specific topic, it could be due to a version mismatch between the **flight controller** (**FC**) firmware and the branch of _ _px4_msgs_ _ you are using. In this case, clone the specific _ _px4_msgs_ _:
+If you are unable to use _ _ros2 topic echo_ _ for a specific topic, it could be due to a version mismatch between the **flight controller** (**FC**) firmware and the branch of _ _px4_msgs_ _ you are using. In this case, clone the specific _ _px4_msgs_ _ :
 
 ```
 $ git clone https://github.com/PX4/px4_msgs.git -b release/1.16
