@@ -7,7 +7,7 @@ The primary objective is to develop a **Python** example that anyone can follow,
 ## YouTube
 To demonstrate the project's functionality and provide some gentle guidance, a short video was published on YouTube. You can find the link below:
 
-[Watch on YouTube](https://www.youtube.com/watch?v=__MgYtL8G18)
+[![Watch the video](https://img.youtube.com/vi/__MgYtL8G18/0.jpg)](https://www.youtube.com/watch?v=__MgYtL8G18)
 
 ## The application
 Essentially, the entire project consists of two nodes. 
