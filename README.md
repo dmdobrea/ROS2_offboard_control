@@ -170,7 +170,34 @@ To take off, land, or supervise the drone, you can install and run **QGroundCont
 
 [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 
-### Build ROS 2 Workspace 
+### Build ROS 2 Workspace
+It is now necessary to establish a workspace for **ROS2** within your home directory. Consequently, in a newly opened terminal:
+1. Create a new workspace within your working directory:
+
+```
+$ mkdir -p /ros2_ws/src
+$ cd ~/ros2__ws/src
+```
+
+2. Clone the repositories _ _px4_ros_com_ _ and _ _px4_msgs_ _ into the _ _/src_ _ directory:
+
+```
+$ git clone https://github.com/PX4/px4_msgs.git
+$ git clone https://github.com/PX4/px4_ros_com.git
+```
+
+3. Navigate to the root directory of your workspace (_ _~/ros2_ws_ _), source the **ROS2** development environment into the current terminal, and compile the workspace using the following command:
+
+```
+$ source /opt/ros/humble/setup.bash
+$ colcon build
+```
+
+These commands compile all the packages located within the _ _/src_ _ directory. 
+All applications developed by us need to be built in a workspace that uses the same **uORB** message definitions (located in the _ _px4_msgs_ _ package) as those used by **PX4**.
+
+### Testing the bridge connection
+To inspect the bridge, see if you can get new topics from the drone:
 
 
 
