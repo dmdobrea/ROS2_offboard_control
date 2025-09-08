@@ -20,7 +20,7 @@ In the [xbox.py](https://github.com/dmdobrea/ROS2_offboard_control/blob/main/off
 
 <p align="center">
   <img src="Images/mode2.png" width="300"/>
-  <img src="Images/mode2.png" width="300"/>
+  <img src="Images/mode3.png" width="300"/>
 </p>
 
 This repo is based on: 
